@@ -17,6 +17,10 @@ const Sorteio = () => {
     evento.preventDefault()
     if(resultado.has(participanteDaVez)){
       setAmigoSecreto(resultado.get(participanteDaVez)!)
+      //Timeout para apagar o nome do sorteado depois de 5 segundos
+      setTimeout(() => {
+        setAmigoSecreto('')
+      }, 5000)
     }
 
   }
